@@ -1,57 +1,177 @@
-// problem 1 
-// output like this 
-
-
-#include <iostream> 
+//Problem 1 to print this pattern
+//output like  this 
+// *
+// * *
+// * * *
+// * * * * 
+// * * *
+// * * 
+// *
+#include <iostream>
 using namespace std;
 
 int main() {
-    int n = 5;
-
-   
-    for(int i = 1; i <= n; i++) {
+    int n;
+    cin>>n;
+    for(int i = 1; i <= n; i++) { // upper triangle
         for(int j = 1; j <= i; j++) {
             cout << "*";
         }
-        cout << "\n";
+        cout <<"\n";
     }
+    
+    for(int k = n-1; k>=1;k--){ // upper trinagle 
+         for(int l = 1; l<=k;l++) {
+         cout<<"*";
+         }
+         cout<<"\n";
+         }
+    
+    
+}
+---------------------------------------------
+// #include <iostream>
+// using namespace std;
 
+// int main() {
+//     int n;
+//     cin>>n;
+//     for(int i = 1; i <= n; i++) {
+//         for(int j = 1; j <= i; j++) {
+//             cout << "*";
+//         }
+//         cout <<"\n";
+//     }
+    
+//     for(int k = n-1; k>=1;k--){
+//          for(int l = 1; l<=k;l++) {
+//          cout<<"*";
+//          }
+//          cout<<"\n";
+//          }
+    
+    
+// }
+
+------------------------------------------------------------------
+
+
+// #include <iostream>
+
+// using namespace std;
+
+// void printmessage(){
+//     cout<<"Hi we are learning functions";
+// }
+
+// int main(){
+//     printmessage();
+//     return 0;
+// }
+
+--------------------------------------------------------------
+
+// #include <iostream>
+
+// using namespace std;
+
+
+// int calculatArea(int length, int breadth){
+//     return  length*breadth;
    
-    for(int i = n - 1; i >= 1; i--) {
-        for(int j = 1; j <= i; j++) {
-            cout << "*";
-        }
-        cout << "\n";
-    }
+// }
 
-    return 0;
-}  
+// int main(){
+//     int a = 12;
+//     int b= 25;
+//     int area = calculatArea(a,b);
+//     cout<<area;
+//     calculatArea(10,2);
+//     return 0;
+// }
 
+----------------------------------------------------------------
 
-#include <iostream> 
+// #include <iostream>
+
+// using namespace std;
+
+// void bellRing(){
+//     cout<<"Ting Tong ...";
+// }
+
+// int main(){
+//     bellRing();
+// }
+
+------------------------------------------------------------------
+
+// #include <iostream>
+
+// using namespace std; 
+// void sendMessage(string message){
+//     cout << message;
+// }
+
+// int main(){
+//     sendMessage("BJP wons...");
+// }
+
+---------------------------------------------------------
+
+// program 4.3 -- no argument,return values 
+ 
+#include <iostream>
 using namespace std;
 
+int ticketNumber(){
+    return 101;
+}
+
 int main() {
-    int n = 5;
-
-   
-    for(int i = 1; i <= n; i++) {
-        for(int j = 1; j <= i; j++) {
-            cout << "*";
-        }
-        cout << "\n";
-    }
-
-   
-    for(int i = n - 1; i >= 1; i--) {
-        for(int j = 1; j <= i; j++) {
-            cout << "*";
-        }
-        cout << "\n";
-    }
-
-    return 0;
-}  
+    cout << ticketNumber();
+}
 -----------------------------------------------------------
 
-  
+// program 4.4 -- currencyConverter 
+ 
+#include <iostream>
+using namespace std;
+
+float currencyConverter(float rupees) {
+    return rupees / 95.25;
+}
+int main() {
+    cout << currencyConverter(500);
+}
+
+--------------------------------------------------------
+// program 5 
+// funcation overloading 
+
+#include <iostream>
+using namespace std;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int add(int a, int b, int c) {
+    return a + b + c;
+}
+
+float add(float a, float b, float c, float d) {
+    return a + b + c + d;
+}
+
+int main() {
+    cout << add(5, 2) << "\n";
+    cout << add(5, 2, 3) << "\n";
+    cout << add(5.0, 2.3, 5.5, 7.9) << "\n";
+}
+    
+
+
+
+
+
