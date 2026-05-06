@@ -1,0 +1,140 @@
+// program - 1
+
+// #include <iostream>
+
+// using namespace std;
+// int coffePrice(int amount){
+    
+//     return amount*30;
+// }
+
+// int main(){
+//     int coffee;
+//     cout << "Enter the number of coffee do you want :";
+//     cin >> coffee;
+//     cout << coffePrice(coffee);
+    
+    
+//     return 0;
+
+-------------------------------------------------------
+
+  //program 2 
+//store discount application
+  //find 10% -- amount * 0.10
+
+#include <iostream>
+using namespace std;
+
+float discount(float amount){
+    float finalAmount = amount * 0.1;
+    return amount  - finalAmount;
+}
+int main(){
+    cout << "the final price is :";
+    cout << discount(100);
+}
+
+
+---------------------------------------------------------------
+
+// prgram 3 
+  #include <iostream>
+#include <string>
+using namespace std;
+
+void setTemprature(){
+    cout << "Temperature Set to 22°C" << "\n";
+}
+
+void setTemprature(double temp){
+    cout << "Temperature Set to " << temp << "°C" << "\n";
+}
+
+void setTemprature(string mode){
+    if(mode == "ECO"){
+        cout << "Temperature set to 24°C" << "\n";
+    }
+    else if(mode == "TURBO"){
+        cout << "Temperature set to 18°C" << "\n";
+    }
+}
+
+int main(){
+
+    setTemprature();
+    setTemprature(22.5);
+    setTemprature("TURBO");
+
+    return 0;
+}
+
+---------------------------------------------------------------
+
+  // program -4 
+// pointers 
+// Declaration, initialization, Arithmetic operation 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 10;
+    int*ptr1 =&a;
+    
+    int b = 20;
+    int *ptr2 =&b;
+    
+
+    int c = *ptr1 + *ptr2;
+    cout << c;
+}
+
+----------------------------------------------------------------------
+
+// problem 6
+//class / objects 
+
+class Student {
+    
+public:    
+    string name;
+    int age; 
+    
+void introduce(){
+        cout << "Hi there, this person name is " << name << " and his age is" << age << "\n";
+        
+    }
+};
+
+
+int main() {
+    Student s1,s2;
+    s1.name = "Abhishek";
+    s1.age = 24;
+    s2.name = "Rahul";
+    s2.age = 21;
+    s1.introduce();
+    s2.introduce();
+    
+    
+}
+
+-------------------------------------------------------------------------
+// problem 7
+//class / objects 
+
+class publicpark {
+    
+public:    
+    void enter(){
+    
+        cout << "Anyone can enter in the park...";
+    }
+};
+
+
+int main() {
+   publicpark p;
+   p.enter();
+    
+}
