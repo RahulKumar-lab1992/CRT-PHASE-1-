@@ -64,4 +64,102 @@ int main(){
 } 
 ----------------------------------------------------
 
+// program -- 4 
+// Constructor 
+// 4.1 Parameterized Constructor
+
+class Student {
+    
+public:    
+    string name;
+    int age; 
+    
+    Student(string StudentName, int StudentAge){
+        name = StudentName;
+        age = StudentAge;
+        
+    }
+    
+void introduce(){
+        cout << "Hi there, this person name is " << name << " and his age is" << age << "\n";
+        
+    }
+};
+
+
+int main() {
+    Student s1("Abhishek",24);
+    s1.introduce();
+}
+-----------------------------------------------------------
+
+// program -- 5 
+// default Constructor
+
+class wifiConnection {
+public :
+   string networkName;
+   int password;
+   
+   wifiConnection() {
+       networkName = "ACT Fibre Net";
+       password = 1234;
+   }
+void showDetails(){
+    cout << networkName << " " << password;
+}
+
+};
+
+int main() {
+    wifiConnection obj1;
+    obj1.showDetails();
+}
+
+----------------------------------------------------------
+// program 6
+// Constructor Overloading
+
+class Rectangle {
+
+public:
+    int length;
+    int width;
+
+    // Constructor 1 (Default Constructor)
+    Rectangle() {
+        length = 10;
+        width = 20;
+    }
+
+    // Constructor 2 (Parameterized Constructor)
+    Rectangle(int l) {
+        length = l;
+        width = 20;
+    }
+
+    // Constructor 3 (Parameterized Constructor)
+    Rectangle(int l, int b) {
+        length = l;
+        width = b;
+    }
+
+    void area() {
+        cout << length * width << "\n";
+    }
+};
+
+int main() {
+
+    Rectangle r1;
+    r1.area();
+
+    Rectangle r2(5);
+    r2.area();
+
+    Rectangle r3(5, 2);
+    r3.area();
+
+    return 0;
+}
   
